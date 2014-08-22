@@ -1,0 +1,10 @@
+- hosts: all
+  user: root
+  sudo: yes
+  tasks:
+    - name: yumでphpをインストール
+      yum: name=php state=latest
+      when: ansible_os_family == 'RedHat'
+    - name: aptでphpをインストール
+      apt: name=php5 state=latest
+      when: ansible_os_family == 'Debian'

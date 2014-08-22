@@ -1,0 +1,6 @@
+<?php
+$ip = '172.0.0.1';
+$redis = new Redis();
+$redis->connect($ip, 6379);
+$redis->set('hanayo', '白いご飯が足りません');
+var_dump($redis->get('hanayo'));

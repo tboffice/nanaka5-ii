@@ -1,0 +1,3 @@
+[otonoki]
+honoka ansible_connection=ssh
+rin ansible_connection=ssh
